@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APPLICATION FORM</title>
+</head>
+<body>
+
+  <header>
+    <h1>Signup</h1>
+    <p>Take the next steps to apply at AltSchool Africa</p>
+  </header>
+  <section>
+   <form action="/submit" method="post">
+      <label for="firstname">First Name</label><br>
+      <input type="text" id="firstname" name="firstname" placeholder="First Name" required><br><br>
+    
+      <label for="lastname">Last Name</label><br>
+      <input type="text" id="lastname" name="lastname" placeholder="Last Name"  required><br><br>
+
+      <label for="email">Email</label><br>
+      <input type="email" id="email" name="email" placeholder="Email" required><br><br>
+    
+      <label for="dateOfBirth">Date of Birth</label><br>
+      <input type="date" id="dateOfBirth" name="dateOfBirth" required><br><br>
+    
+      <label for="gender">Gender</label><br>
+        <select id="gender" name="gender" required>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select><br><br>
+
+      <label for="phonenumber">Phone Number</label><br>
+      <input type="text" id="phonenumber" name="phonenumber" placeholder="Phone Number" required><br><br>
+
+      <label for="countryOfResidence">Country of Residence</label><br>
+      <input type="text" id="countryOfResidence" name="countryOfResidence" placeholder="Country of Residence" required><br><br>
+
+      <label for="stateOfResidence">State of Residence</label><br>
+      <input type="text" id="stateOfResidence" name="stateOfResidence" placeholder="State of Residence" required><br><br>
+
+      <label for="password">Password</label><br>
+      <input type="password" id="password" name="password" minlength="3" maxlength="16" placeholder="Password" required><br><br>
+
+      <label for="confirmPassword">Confirm Password</label><br>
+      <input type="password" id="Confirm Password" name="confirmPassword" minlength="3" maxlength="16" placeholder="Confirm Password" required><br><br>
+
+      <label for="channel">How did you hear about us?</label><br>
+      <input type="text" id="channel" name="channel" placeholder="Optional: Let us know how you found us" size="40"><br><br>
+
+      <label for="terms">By clicking continue, I agree to <a href="#">Terms of Use</a> and acknowledge that I have read the <a href="#">Privacy Policy</a>.</label><br>
+      <br>
+      <input type="submit" value="Sign Up">
+  </section>
+</body>
+</html>
