@@ -3,8 +3,8 @@ body {
 }
 
 .outer-box {
-  border: 5px solid white;
-  border-bottom: 10px solid white;
+  border: 10px solid white;
+  border-bottom: 20px solid white;
   background-color: rgba(42, 42, 42, 0.605);
   width: 40vw;
   height: 45vh;
@@ -15,7 +15,7 @@ body {
 
 .container {
   position: relative;
-  margin: 60px auto auto 35px;
+  margin: 60px auto auto 50px;
   width: 60%;
  }
 
