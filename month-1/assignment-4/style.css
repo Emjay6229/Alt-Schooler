@@ -1,0 +1,137 @@
+html {
+  box-sizing: border-box;
+  font-family: 'Lato';
+}
+
+.grid-container {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.top-grid-item, .bottom-grid-item {
+  width: 100%;
+  height: 50vh;
+}
+
+.bottom-grid-item {
+  background-color: #666666;
+  position: relative;
+}
+
+.top-grid-item {
+  border-bottom: 8px solid #999999;
+}
+
+#header {
+  font-family: 'Lato';
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 38.4px;
+  text-align: left;
+  margin: 100px 30px 40px;
+}
+
+.top-paragraph-1, .top-paragraph-2 {
+  font-family: 'Lato';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: -0.005em;
+  margin: 30px 0px 30px 30px;
+  text-align: left;
+  width: 342px;
+  height: 60px;
+}
+
+span { 
+  font-family: Lato;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 30px;
+  letter-spacing: -0.005em;
+  text-align: left;
+  color: #119f70;
+  border: 0;
+}
+
+
+#banner {
+  background-color: #FFBF00;
+  width: 374px;
+  height: 10%;
+  padding: 15px 0 30px;
+  position: absolute;
+  top: 80px;
+  border-bottom: 8px solid #CC9900;
+  font-family: 'Lato';
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 28.8px;
+}
+
+.banner-paragraph {
+  margin: 0;
+  margin-left: 30px;
+  width: 318px;
+}
+
+#text-box {
+  background-color: #ffffff;
+  margin-top: 70px;
+  padding-top: 100px;
+  height: 100vh;
+  font-family: 'Lato';
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.txt-paragraph {
+  margin: 25px 0 0px 30px;
+  padding-right: 20px;
+  line-height: 30px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .top-paragraph-1, .top-paragraph-2 {
+    width: 450px;
+    height: 60px; 
+    padding-right: 0;
+    margin-right: 0;  
+  }
+
+  .top-paragraph-2 {
+    width: 342px; 
+  }
+
+
+  #banner {
+    width: 52%;
+    padding-bottom: 0.5rem;
+  }
+
+  .banner-paragraph {
+    width: 95%;
+  }
+
+  .txt-paragraph {
+    margin: 0 0 0 30px;
+    padding-right: 20px;
+    line-height: 30px;
+  }
+}
+
+/* Media query for desktops (min-width: 1024px) */
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 20px; /* Larger font size for desktops */
+  }
+
+  .container {
+    width: 80%; /* Restrict the container width on desktop */
+    margin: 0 auto; /* Center the container */
+  }
+}

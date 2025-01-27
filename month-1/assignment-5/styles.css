@@ -1,0 +1,143 @@
+html {
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+body {
+  font-family: "Roboto";
+  margin: 0;
+  padding: 20px;
+  background: rgba(247, 253, 252, 1);
+}
+
+.info-section {
+  text-align: left;
+  margin-bottom: 40px;
+  font-family: "Roboto";
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 29.4px;
+  letter-spacing: -0.800000011920929px;
+}
+
+.info-section p {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25px;
+  text-align: left;
+  color: rgba(115, 115, 115, 1);
+  padding: 0px 0px 0px 0px;
+  width: 300px;
+  height: 50px;
+}
+
+.register-form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: rgba(255, 255, 255, 1);
+  padding: 20px;
+  box-shadow: 0px 4px 50px 0px rgba(4, 8, 19, 0.1);
+  border-radius: 4px;
+}
+
+.register-form div {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input, select {
+  padding: 10px;
+  font-size: 16px;
+  border: 0.5px solid #ccc;
+  border-radius: 5px;
+}
+
+
+#terms {
+  margin-top: 20px;
+  letter-spacing: -0.005em;
+  line-height: 25px;
+  font-family: Sofia Pro;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: rgb(48,196,182);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #007bff;
+}
+
+img {
+  width: 100px;
+  height: 100px
+}
+
+h2 {
+  display: block;
+  font-size: 30px;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: light;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    display: grid;
+  }
+
+ .main-section {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 50px;
+    border: 2px solid black;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .info-section, .form-section {
+    border: 2px solid red;
+
+  }
+
+  .info-section img {
+    height: 150px;
+    width: 150px;
+  }
+
+  .info-section {
+    width: 460px;
+    height: 275px;
+  }
+
+  .form-section {
+    width: 580px;
+    height: 679px;
+    border-radius: 6px 0px 0px 0px;
+  }
+
+  .register-form {
+    width: 100%;
+    height: 100%;
+    border: 2px solid green;
+  }
+}
