@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="container">
+        <div class="left-section">
+            <img src="../../../assets/Logo.png" alt="Logo" class="logo">
+            <h1>For Individuals</h1>
+            <p>Inspiring wholesome harmony for the mind, body and spirit, for everyone, everywhere.</p>
+        </div>
+
+        <section class="form-section">
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" placeholder="Tolu">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender">
+                            <option value="" disabled selected>Select here</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <div class="date-input">
+                            <input type="date" id="dob">
+                            <!-- <img class="calendar-icon" src="../../../assets/u_a_calendar-alt.png" alt="calendar-icon"> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="weight">Weight (KG)</label>
+                        <input type="number" id="weight" placeholder="Enter Weight">
+                    </div>
+                    <div class="form-group">
+                        <label for="height">Height (CM)</label>
+                        <input type="number" id="height" placeholder="Enter height here..">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="activity">Activity Level</label>
+                    <select id="activity">
+                        <option value="" disabled selected>Select here</option>
+                        <option value="low">Low</option>
+                        <option value="moderate">Moderate</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="password-input">
+                        <input type="password" id="password">
+                        <img class="eye-icon" src="../../../assets/show.png" alt="eye-icon">
+                    </div>
+                </div>
+
+                <button type="submit">Register</button>
+
+                <p class="terms">
+                    By clicking Register, you agree to our 
+                    <a href="#">Terms of Use</a> and our 
+                    <a href="#">Privacy Policy</a>
+                </p>
+            </form>
+          </section>
+      </main>
+</body>
+</html>

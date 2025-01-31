@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joshua Onwuemene - Portfolio</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Navigation */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #f97316;
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+        }
+
+        .hero-text {
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: #f97316;
+            color: white;
+            text-decoration: none;
+            border-radius: 9999px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #ea580c;
+        }
+
+        /* Image Container */
+        .image-container {
+            position: relative;
+        }
+
+        .image-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .profile-image {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            display: block;
+        }
+
+        .image-blob {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            bottom: -20px;
+            left: -20px;
+            background-color: #f97316;
+            opacity: 0.2;
+            border-radius: 50%;
+            z-index: -1;
+            filter: blur(40px);
+        }
+
+        /* .badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: white;
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .badge-title {
+            font-weight: 600;
+            font-size: 0.875rem;
+        } */
+
+        .badge-subtitle {
+            color: #666;
+            font-size: 0.75rem;
+        }
+
+        /* Assignments Section */
+        .assignments {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 2rem;
+        }
+
+        .assignments-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .assignments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .assignment-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border: 1px solid #fee2d6;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .assignment-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+            border-color: #f97316;
+        }
+
+        .assignment-title {
+            color: #f97316;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .assignment-link {
+            color: #666;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            background: #f8f9fa;
+            color: #666;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .hero-content {
+                margin: 0 auto;
+            }
+
+            .image-wrapper {
+                max-width: 300px;
+            }
+
+            .assignments-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo">Portfolio</a>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Hi! I'm Joshua Onwuemene.</h1>
+            <p class="hero-text">
+                I am an AltSchool student currently enrolled in the Cloud Engineering track. 
+                I am a graduate of Medical Biochemistry from the prestigious university of Benin, Benin city, 
+                but my curiosity for modern technology birthed by my early background tinkering around computers and a strong desire to be an active player in the rapidly evolving technological landscape has led me to explore a career in tech.
+                When I am not doing techy stuff, you can find me reading a book, surfing YouTube, listening to music and playing on the keyboard (once in a while though. smiles!).
+            </p>
+            <a href="#assignments" class="cta-button">See my assignments here</a>
+        </div>
+
+        <div class="image-container">
+            <div class="image-wrapper">
+                <div class="image-blob"></div>
+                <img src="../../../assets/josh_pics.jpg" alt="Joshua Onwuemene" class="profile-image">
+                <!-- <div class="badge">
+                    <div class="badge-title">Cloud Engineering</div>
+                    <div class="badge-subtitle">AltSchool Africa</div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <section id="assignments" class="assignments">
+        <h2 class="assignments-title">My Assignments</h2>
+        <div class="assignments-grid">
+            <a href="./first-semester/HTML/assignment-1/about-me.html" class="assignment-card">
+                <h3 class="assignment-title">HTML Assignments</h3>
+                <p class="assignment-link">View details →</p>
+            </a>
+            <a href="./first-semester/CSS/otter-essay/otter.html" class="assignment-card">
+                <h3 class="assignment-title">Otter-Essay</h3>
+                <p class="assignment-link">View details →</p>
+            </a>
+            <a href="./first-semester/CSS/huckle-berry/huckle-berry.html" class="assignment-card">
+                <h3 class="assignment-title">Huckleberry</h3>
+                <p class="assignment-link">View details →</p>
+            </a>
+            <a href="./first-semester/CSS/wp-checkout-form/checkout.html" class="assignment-card">
+                <h3 class="assignment-title">WP-Pusher Checkout Form</h3>
+                <p class="assignment-link">View details →</p>
+            </a>
+            <a href="./first-semester/CSS/individual-health/individual-form.html" class="assignment-card">
+                <h3 class="assignment-title">Individual Health form</h3>
+                <p class="assignment-link">View details →</p>
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2024 Joshua Onwuemene. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+

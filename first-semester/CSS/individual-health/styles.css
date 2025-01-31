@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato"
+}
+
+body {
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+.left-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.left-section p {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.tag {
+  background-color: #f3e8ff;
+  color: #9333ea;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 0.875rem;
+}
+
+.form-section {
+  background: white;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 500;
+}
+
+input, select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input:focus, select:focus {
+  border-color: #4fd1c5;
+}
+
+.date-input, .password-input {
+  position: relative;
+}
+
+.calendar-icon, .eye-icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  cursor: pointer;
+}
+
+button {
+  width: 100%;
+  padding: 0.875rem;
+  background-color: #4fd1c5;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-bottom: 1rem;
+}
+
+button:hover {
+  background-color: #3bb3a7;
+}
+
+.terms {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.terms a {
+  color: #4fd1c5;
+  text-decoration: none;
+}
+
+.terms a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding: 1rem;
+  }
+
+  .left-section {
+      text-align: left;
+      padding: 0 1rem;
+  }
+
+  .left-section h1 {
+      font-size: 2rem;
+  }
+
+  .form-section {
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+  }
+
+  .form-row {
+      grid-template-columns: 1fr;
+  }
+}
+
+/* Status Bar Styles for Mobile */
+@media (max-width: 768px) {
+  body::before {
+      content: '';
+      display: block;
+      height: 44px;
+      background-color: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+  }
+}

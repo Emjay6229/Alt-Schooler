@@ -1,0 +1,402 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato';
+    background-color: #f5f8fa;
+    color: #1d2c3c;
+    line-height: 1.5;
+}
+
+/* Header styles */
+.header {
+    background: white;
+    border-bottom: 1px solid #e0e6ea;
+    padding: 0 1rem;
+    height: 64px;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #1d2c3c;
+    font-weight: 600;
+}
+
+.logo img {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+}
+
+.nav {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.nav a {
+    color: #1d2c3c;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    color: #1179bf;
+}
+
+.account-btn {
+    border: 1px solid #e0e6ea;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+.account-btn:hover {
+    border-color: #1179bf;
+}
+
+/* Main content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.checkout-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0rem;
+    max-width: 1024px;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+
+/* Checkout form */
+.checkout-form {
+    background: white;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding-bottom: 2rem;
+}
+
+.checkout-title {
+    font-size: 1.875rem;
+    font-weight: normal;
+    margin-bottom: 2rem;
+    text-shadow: 0px 4px 4px 0px #00000040;
+    font-family: Lato;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36px;
+}
+
+.section {
+    margin-bottom: 2rem;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.section-number {
+    width: 32px;
+    height: 32px;
+    border: 2px solid #1179bf;
+    border-radius: 50%;
+    color: #1179bf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-title {
+    font-size: 1.25rem;
+    font-weight: normal;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #e0e6ea;
+    border-radius: 4px;
+    background: #f5f8fa;
+    font-size: 1rem;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #1179bf;
+}
+
+.card-input-group {
+    position: relative;
+}
+
+.card-extra-inputs {
+    display: flex;
+    gap: 8px;
+    margin-top: 0.5rem;
+}
+
+.card-extra-inputs input {
+    flex: 1;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background: #038e7d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.submit-btn:hover {
+    background: #027b6c;
+}
+
+.help-text {
+    text-align: center;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.help-text a {
+    color: #1179bf;
+    text-decoration: none;
+}
+
+.help-text a:hover {
+    text-decoration: underline;
+}
+
+.stripe-badge {
+    text-align: center;
+}
+
+/* Pricing sidebar */
+.pricing-sidebar {
+    background: #1179bf;
+    color: white;
+    padding: 2rem;
+}
+
+.plan-name {
+    margin-bottom: 1rem;
+    font-family: "Lato";
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    width: 93px;
+    height: 24px;
+}
+
+.plan-price {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    font-family: Lato;
+    font-size: 60px;
+    font-weight: 300;
+    line-height: 72px;
+    letter-spacing: -0.014999999664723873px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+
+.per-year {
+    font-family: "Lato";
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.6px;
+    letter-spacing: -0.014999999664723873px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+
+.dollar-sign {
+    font-family: "Lato";
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.8px;
+    letter-spacing: -0.014999999664723873px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+
+.plan-price span {
+    font-size: 1.5rem;
+}
+
+.plan-period {
+    opacity: 0.8;
+    margin-bottom: 2rem;
+}
+
+.features-list {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.features-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.features-list li::before {
+    content: "✓";
+    font-size: 1.25rem;
+}
+
+.plan-upgrade {
+    margin-bottom: 3rem;
+}
+
+.plan-upgrade a {
+    color: white;
+    text-decoration: underline;
+}
+
+.plan-upgrade a:hover {
+    text-decoration: none;
+}
+
+.testimonial {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 2rem;
+    padding-bottom: 12rem;
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.testimonial-author img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.875rem;
+}
+
+.footer a {
+    color: #1179bf;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+    .checkout-grid {
+        grid-template-columns: 3fr 2fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card-extra-inputs {
+        position: absolute;
+        right: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-top: 0;
+    }
+
+    .card-extra-inputs input {
+        width: 80px;
+    }
+}
+
+@media (max-width: 767px) {
+    .header-content {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem 0;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .nav a {
+        padding: 0.5rem;
+    }
+
+    .checkout-form,
+    .pricing-sidebar {
+        padding: 1rem;
+    }
+
+    .checkout-title {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1rem;
+    }
+
+    .plan-price {
+        font-size: 2.5rem;
+    }
+}

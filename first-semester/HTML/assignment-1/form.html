@@ -3,12 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <title>APPLICATION FORM</title>
+  <style>
+    body {
+      font-family: 'Lato', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    nav {
+      margin-bottom: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin-right: 15px;
+      padding: 5px 10px;
+      border: 2px solid white;
+      border-radius: 3px;
+    }
+
+    .assignment-card {
+      background-color: #e6e6e6;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    p {
+      color: #666;
+      font-size: 16px;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    select,
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+</style>
 </head>
 <body>
   <header>
     <nav>
-      <a href="index.html">Home</a>
+      <a href="../../../index.html">Go Home</a>
+      <a href="../assignment-1/about-me.html">View about-me assigment</a>
+      <a href="../assignment-2/table.html" class="assignment-card">View table assignment</a>
+      <a href="../assignment-2/media.html" class="assignment-card">View media assignment</a>
     </nav>
     <h1>Sign up</h1>
     <p>Take the next steps to apply at AltSchool Africa</p>

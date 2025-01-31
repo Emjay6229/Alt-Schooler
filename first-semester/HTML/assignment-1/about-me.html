@@ -4,13 +4,91 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Biography</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    body {
+      font-family: "Lato", sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    /* Navigation Styles */
+    #nav-bar {
+      background-color: #333;
+      padding: 20px;
+    }
+
+    #nav-bar a {
+      color: #fff;
+      text-decoration: none;
+      padding: 5px 10px;
+      border: 2px solid white;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      margin-right: 10px;
+    }
+
+    #nav-bar a:hover {
+      background-color: #555;
+    }
+
+    /* Section Styles */
+    section {
+      background-color: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h4 {
+      color: #2c3e50;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 5px;
+    }
+
+    /* Biodata Styles */
+    #biodata ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    #biodata li {
+      margin-bottom: 10px;
+    }
+
+    /* Footer Styles */
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      color: #777;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+
+      section {
+        padding: 15px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <!-- Create a web page that should display your basic information, with ALT SCHOOL ID, a biography, relevant details explaining why you joined the program, and your goals for the School of Engineering program. 
-  Implement a fragment identifier feature to enable scrolling back to the top of the page. 
-  Create a folder and name the file index.html. -->
-  <nav>
-    <a href="form.html">Sign up</a>
+  <nav id="nav-bar">
+    <a href="../../../index.html">Go Home</a>
+    <a href="../assignment-1/form.html">View form assignment</a>
+    <a href="../assignment-2/media.html" class="assignment-card">View media assignment</a>
+    <a href="../assignment-2/table.html" class="assignment-card">View table assignment</a>
   </nav>
   <section id="biodata">
     <h4>BIODATA</h4>
@@ -42,10 +120,9 @@
       I look forward to starting Cloud Engineering centred projects and exploring all the shiny tools that make applications available to users.
     </p>
   </section>
-  <nav>
-    <a href="#biodata">Go to top</a>
+  <nav id="nav-bar">
+    <a href="#nav-bar">Go to top</a>
   </nav>
-  <br><br>
   <footer>
     <i> (c) Built by Joshua Onwuemene</i>
   </footer>

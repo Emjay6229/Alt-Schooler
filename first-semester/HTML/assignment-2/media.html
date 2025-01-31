@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Assignment-2</title>
+  <style>
+  /* Reset default styles */
+    body, h1, p, nav, div, picture, video, audio {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Lato', Arial, sans-serif;
+    }
+
+    body {
+        background-color: #f4f4f4;
+        color: #333;
+        line-height: 1.6;
+        text-align: center;
+    }
+
+    nav {
+        background: #19528b;
+        padding: 20px 5px;
+    }
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 18px;
+        font-weight: bold;
+        border: 2px solid white;
+        padding: 8px;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    section {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 4px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        font-size: 26px;
+        margin-bottom: 15px;
+        color: #19528b;
+    }
+
+    div {
+        text-align: left;
+    }
+
+    picture img {
+        display: block;
+        margin: 10px auto;
+        border-radius: 10px;
+    }
+
+    p {
+        font-size: 16px;
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+
+    video, audio {
+        display: block;
+        margin: 10px auto;
+        max-width: 100%;
+    }
+
+    @media (max-width: 600px) {
+        nav a {
+            display: block;
+            padding: 8px 0;
+        }
+        
+        section {
+            padding: 15px;
+        }
+    }
+</style>
+</head>
+<body>
+    <nav>
+      <a href="../../../index.html">Go Home</a>
+      <a href="../assignment-1/about-me.html">View about-me assigment</a>
+      <a href="../assignment-1/form.html" class="assignment-card">View media assigment</a>
+      <a href="../assignment-2/table.html" class="assignment-card">View table assignment</a>
+    </nav>
+      <section>
+        <h1>About me</h1>
+        <div>
+            <picture>
+              <source media="(max-width: 600px)" srcset="/images/mobile.jpg" type="image/jpg">
+              <source media="(max-width: 900px)" srcset="/images/tablet.jpg" type="image/jpg">
+              <source media="(min-width: 901px)" srcset="/assets/josh_pics.jpg" type="image/jpg">
+              <img src="/assets/josh_pics.jpg" alt="A picture of Joshua Onwuemene" width="220px" height="320px">
+            </picture>
+            <p>
+              Hi there! I'm Joshua Onwuemene. I'm a passionate learner at AltSchool Africa currently studying and building a strong foundation to becoming a world class engineer. 
+              My goal is to drive digital transformation by building impactful technology solutions!
+            </p>
+            <br>
+            <video controls width="500">
+                <source src="videos/introduction.mp4" type="video/mp4">
+                <p>Your browser does not support HTML video.</p>
+            </video> 
+            <br><br>
+            <audio controls>
+                <source src="audios/message.mp3" type="audio/mpeg">
+                <p>Your browser does not support HTML audio.</p>
+            </audio>
+        </div>
+    </section>
+</body>
+</html>
