@@ -62,6 +62,30 @@
             border-radius: 5px;
             transition: background 0.3s ease;
         }
+
+        @media (max-width: 874px) {
+            nav {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+                padding: 10px 5px;
+            }
+
+            nav a {
+                white-space: nowrap;
+                padding: 8px 10px;
+            }
+            }
+
+        @media (max-width: 501px) {
+        nav {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            gap: 8px;
+            padding: 10px;
+        }
+    }
     </style>
 </head>
 <body>

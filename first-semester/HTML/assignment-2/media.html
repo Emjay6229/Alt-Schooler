@@ -79,15 +79,28 @@
         max-width: 100%;
     }
 
-    @media (max-width: 600px) {
-        nav a {
-            display: block;
-            padding: 8px 0;
-        }
-        
-        section {
-            padding: 15px;
-        }
+    @media (max-width: 863px) {
+      nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        padding: 10px 5px;
+      }
+
+      nav a {
+        white-space: nowrap;
+        padding: 8px 10px;
+      }
+    }
+
+    @media (max-width: 501px) {
+      nav {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 8px;
+        padding: 10px;
+      }
     }
 </style>
 </head>

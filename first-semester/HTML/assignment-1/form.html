@@ -21,6 +21,7 @@
     }
 
     nav {
+      padding: 20px 15px;
       margin-bottom: 20px;
     }
 
@@ -28,8 +29,8 @@
       text-decoration: none;
       color: #333;
       margin-right: 15px;
-      padding: 5px 10px;
-      border: 2px solid white;
+      padding: 10px 15px;
+      border: 1px solid white;
       border-radius: 3px;
     }
 
@@ -86,6 +87,30 @@
     a {
       color: #007bff;
       text-decoration: none;
+    }
+
+    @media (max-width: 842px) {
+      nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        padding: 10px;
+      }
+
+      nav a {
+        white-space: nowrap;
+        /* width: 300px; */
+      }
+    }
+
+    @media (max-width: 470px) {
+      nav {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 8px;
+        padding: 10px;
+      }
     }
 </style>
 </head>
