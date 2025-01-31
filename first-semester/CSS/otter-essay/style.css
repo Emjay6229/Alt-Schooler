@@ -45,34 +45,38 @@ body {
   font-family: sans-serif;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  nav a {
-      display: block;
-      margin-bottom: 10px;
+/* @media (max-width: 1026px) {
+  .outer-box {
+    padding-bottom: 10px;
   }
-  
-  form {
-      padding: 15px;
+
+  .essay, .text-box {
+    padding: 0 0.5rem;
   }
-  
-  .text-box {
-      padding: 40px 20px;
-      font-size: 16px;
+} */
+
+@media (max-width: 1026px) {
+  .outer-box, .container, .text-box, .essay{
+     width: fit-content;
   }
-  
+
+  .container {
+    padding-right: 4rem;
+    padding-bottom: 4rem;
+  }
+
   .essay {
-      font-size: 20px;
+    padding: 0 2rem;
   }
 }
 
-@media (max-width: 480px) {
-  .text-box {
-      padding: 30px 15px;
-      font-size: 14px;
+@media (max-width: 450px) {
+  .outer-box {
+    padding-bottom: 40px;
+    padding-right: 40px;
   }
-  
-  .essay {
-      font-size: 18px;
+
+  .text-box {
+   width: 270px;
   }
 }
