@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joshua Onwuemene - Portfolio</title>
     <style>
-        /* Reset and base styles */
         * {
             margin: 0;
             padding: 0;
@@ -22,7 +21,6 @@
             color: #333;
         }
 
-        /* Navigation */
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -35,11 +33,11 @@
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
-            color: #f97316;
+            color: black;
             text-decoration: none;
+            text-shadow: 0 10px 15px rgba(0,0,0,0.3);
         }
 
-        /* Hero Section */
         .hero {
             max-width: 1200px;
             margin: 0 auto;
@@ -97,6 +95,7 @@
             height: auto;
             border-radius: 50%;
             display: block;
+            mix-blend-mode: multiply;
         }
 
         .image-blob {
@@ -112,27 +111,6 @@
             filter: blur(40px);
         }
 
-        /* .badge {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: white;
-            padding: 0.75rem 1rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .badge-title {
-            font-weight: 600;
-            font-size: 0.875rem;
-        } */
-
-        .badge-subtitle {
-            color: #666;
-            font-size: 0.75rem;
-        }
-
-        /* Assignments Section */
         .assignments {
             max-width: 1200px;
             margin: 4rem auto;
@@ -177,7 +155,6 @@
             color: #666;
         }
 
-        /* Footer */
         .footer {
             text-align: center;
             padding: 2rem;
@@ -185,7 +162,6 @@
             color: #666;
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             .hero {
                 grid-template-columns: 1fr;
@@ -209,7 +185,7 @@
 </head>
 <body>
     <nav class="navbar">
-        <a href="#" class="logo">Portfolio</a>
+        <a href="#assignments" class="logo">Portfolio</a>
     </nav>
 
     <section class="hero">
@@ -227,11 +203,7 @@
         <div class="image-container">
             <div class="image-wrapper">
                 <div class="image-blob"></div>
-                <img src="../../../assets/josh_pics.jpg" alt="Joshua Onwuemene" class="profile-image">
-                <!-- <div class="badge">
-                    <div class="badge-title">Cloud Engineering</div>
-                    <div class="badge-subtitle">AltSchool Africa</div>
-                </div> -->
+                <img src="../../../assets/josh_bw.jpeg" alt="Joshua Onwuemene" class="profile-image">
             </div>
         </div>
     </section>
