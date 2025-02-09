@@ -46,21 +46,33 @@
         }
 
         nav {
-            background-color: #233d61;
+            background-color: #fff;
             padding: 30px 15px;
             text-align: left;
         }
 
         nav a {
-            color: #fff;
+            color: #333;
             text-decoration: none;
             font-size: 16px;
-            font-weight: bold;
+            font-weight: 100;
             margin: 0 15px;
             padding: 10px 15px;
-            border: 2px solid white;
+            border: 1px solid #333;;
             border-radius: 5px;
             transition: background 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #fff;
+            background-color: #333;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            margin-top: 10rem;
         }
 
         @media (max-width: 874px) {
@@ -75,7 +87,7 @@
                 white-space: nowrap;
                 padding: 8px 10px;
             }
-            }
+        }
 
         @media (max-width: 501px) {
         nav {
@@ -98,7 +110,7 @@
     <header>
         <h1>Welcome to AltSchool Africa</h1>
     </header>
-    <div class="container">
+    <main class="container">
         <h2>AltSchool Africa Schools and Courses</h2>
         <table>
             <thead>
@@ -120,6 +132,9 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </main>
+    <footer class="footer">
+        <p>© 2025 Joshua Onwuemene. All rights reserved.</p>
+    </footer>
 </body>
 </html>

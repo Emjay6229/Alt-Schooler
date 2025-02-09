@@ -1,0 +1,61 @@
+body {
+  background-color: black;
+  font-family: "Cabin";
+}
+
+.card {
+  position: relative;
+  width: 30rem;
+  display: flex;
+  height: 45vh;
+  margin: 40px 0 0 150px;
+  padding-bottom: 30px;
+}
+
+.main-body {
+  background-color: #A7A8CD;
+  width: 800px;
+  height: 500px;
+  margin: auto auto;
+  margin-top: 300px;
+  border: 10px solid white;
+}
+
+img {
+  position: relative;
+  height: 60%;
+}
+
+.card-title span {
+  color: #555555;
+}
+
+span {
+  font-size: medium;
+}
+
+.card-title {
+  font-size: 800
+}
+
+.card-text{
+  line-height: 1.3rem;
+  padding-top: 10px;
+  font-weight: 500;
+}
+
+.subtext {
+  width: 200px;
+  background-color: #FEF1B5;
+  position: absolute;
+  top: 45px;
+  left: 140px;
+  padding: 5px 10px;
+  font-size: 18px;
+  font-weight: bold;
+  top: 355px;
+  left: 470px;
+  z-index: 1;
+  border-radius: 5px 20px 20px 5px;
+  color: black;
+}

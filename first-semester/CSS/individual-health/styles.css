@@ -12,7 +12,7 @@ body {
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 500px auto;
   padding: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -131,7 +131,6 @@ button:hover {
   text-decoration: underline;
 }
 
-/* Mobile Responsive Styles */
 @media (max-width: 768px) {
   .container {
       grid-template-columns: 1fr;
