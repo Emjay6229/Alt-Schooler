@@ -1,3 +1,9 @@
+## ✅ **Deployment Details**
+Public IP **16.171.44.92**
+
+**Page**
+![Landing page Screenshot](webpage-screenshot.png)
+
 ## ✅ **Server Setup**
 
 To set up a cloud-based server, a server provider was selected (**AWS**).
