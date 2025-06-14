@@ -1,75 +1,164 @@
-# Server Setup
-To set up a cloud-based server, a server provider was selected (AWS)
+## ✅ **Server Setup**
 
--[x] Login to AWS to spin up an AWS EC2 instance
-- Click on Launch instance
-- Enter preferred instance name, server OS, hardware specification and instance type
-- Set up key-pair for SSH access and download the generate .pem file.
-- Configure a security group that allows traffic from ports 22 (SSH), 80 (HTTP) and 443 (HTTPS)
-- Select storage volume (in this case, the default storage volume is fine)
-- Launch instance
+To set up a cloud-based server, a server provider was selected (**AWS**).
 
-# Accessing the Server
-To access the EC2 instance, SSH into it with the following command
-`sudo ssh -i <path-to-key-pair.pem-file> ubuntu@<instance-public-ip>`
+1. Log in to AWS and spin up an EC2 instance.
+2. Click **Launch Instance**.
+3. Enter your preferred instance name, server OS, hardware specification, and instance type.
+4. Set up a key pair for SSH access and download the generated `.pem` file.
+5. Configure a security group that allows traffic on ports **22 (SSH)**, **80 (HTTP)**, and **443 (HTTPS)**.
+6. Select storage volume (the default storage volume is fine).
+7. Launch the instance.
 
-#### bonus: run `sudo apt update` to install latest version of packages and dependencies.
+---
 
-# Webpage Deployment
-The landing page for this assignment was created with Next.Js (a mordern React framework for quickly bootstrapping websites and apps) and pushed to github. To deploy the project,
+## ✅ **Accessing the Server**
 
--[x] SSH into the EC2 instance (if that isn't done yet) and run `git clone <project-repo-link>`
-This step clones the project from Github into the EC2 instance.
+To access the EC2 instance, SSH into it with the following command:
 
--[x] Install Node.js on the EC2 instance using the commands 
-`curl -fsSL https://deb.nodesource.com/setup_<version_number>.x | sudo -E bash -`
+```bash
+ssh -i <path-to-key-pair.pem-file> ubuntu@<instance-public-ip>
+```
 
-This sets up the node source for Nodejs <version_number> on server package manager (apt).
+**Bonus:** Run `sudo apt update` to update the package index.
 
-Then run `sudo apt install -y nodejs` to install the specified node version on the EC2 instance. 
-Run `node -version` and `npm -version `to confirm that installation was successful.
+---
 
--[x] Run `npm install` to install nextjs dependencies
--[x] Run `next build` to build the project and generate a .next folder and `next start` to start running the project (default port is 3000).
+## ✅ **Webpage Deployment**
 
-#### bonus: To ensure server automatically restarts whenever it crashes, install the node process manager 2 (pm2) and run the node app with it.
+The landing page was created with **Next.js** (a modern React framework) and pushed to GitHub.
 
-# Obtaining a domain or subdomain name
-A Free (sub)domain names can be obtained from sites like duckdns, freeDNS.afraid.org etc. or one can be purchased from domain name issuers like namecheap, goDaddy etc
+To deploy the project:
 
-# Securing our Website
-To secure our website, we can obtain a free SSL certificate from let's encrypt. 
-Let's encrypt provides a CLI tool (cerbot) to generate a free SSL certificate for our domain
+1. **SSH into the EC2 instance** (if you haven’t already):
 
--[x] Install certbot `sudo apt install certbot python3-certbot-nginx -y`
--[x] Run certbot `sudo certbot --nginx` and follow the prompt to complete the step or just run `sudo certbot --nginx -d <domain-name>`
+   ```bash
+   ssh -i <path-to-key-pair.pem-file> ubuntu@<instance-public-ip>
+   ```
 
-# Setting up NGINX Reverse proxy
-- Install Nginx `sudo apt install nginx -y`
-- Run `sudo nano /etc/nginx/sites-available/default` and add the following to both 80 and 443 server blocks
+2. **Clone the project from GitHub:**
 
-```server {
-    listen 80;
-    server_name <your-domain-name>;
+   ```bash
+   git clone <project-repo-link>
+   ```
 
-    location / {
-        proxy_pass http://localhost:3000;
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection 'upgrade';
-        proxy_set_header Host $host;
-        proxy_cache_bypass $http_upgrade;
-    }
-}```
+3. **Install Node.js on the EC2 instance:**
 
-Since our webpage is a nodeJs application comment out the following from the Nginx file
- <!-- 
- root /var/www/html;
- index index.html index.htm index.nginx-debian.html;
- try_files $uri $uri/ =404;
- -->
+   ```bash
+   curl -fsSL https://deb.nodesource.com/setup_<version_number>.x | sudo -E bash -
+   sudo apt install -y nodejs
+   ```
 
-- Run `sudo nginx -t` to test that the config is okay
-- Run `sudo systemctl reload nginx` to reload nginx and apply changes
+   Verify installation:
 
-Your domain should be able to serve your landing page over HTTPS!
+   ```bash
+   node -v
+   npm -v
+   ```
+
+4. **Install project dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+5. **Build and start the Next.js project:**
+
+   ```bash
+   npm run build
+   npm start
+   ```
+
+   (The default port is `3000`.)
+
+**Bonus:** To ensure the server automatically restarts on crashes, install **PM2** and run the app with it.
+
+---
+
+## ✅ **Obtaining a Domain or Subdomain**
+
+Free (sub)domain names can be obtained from providers like:
+- [DuckDNS](https://www.duckdns.org)
+- [FreeDNS (afraid.org)](https://freedns.afraid.org)
+
+Or you can purchase a domain from providers like **Namecheap** or **GoDaddy**.
+
+---
+
+## ✅ **Securing the Website**
+
+To secure your website, obtain a free SSL certificate from **Let’s Encrypt** using **Certbot**.
+
+1. **Install Certbot for NGINX:**
+
+   ```bash
+   sudo apt install certbot python3-certbot-nginx -y
+   ```
+
+2. **Run Certbot and follow the prompts:**
+
+   ```bash
+   sudo certbot --nginx
+   ```
+
+   Or specify your domain directly:
+
+   ```bash
+   sudo certbot --nginx -d <your-domain-name>
+   ```
+
+---
+
+## ✅ **Setting up NGINX Reverse Proxy**
+
+1. **Install NGINX:**
+
+   ```bash
+   sudo apt install nginx -y
+   ```
+
+2. **Configure the default site:**
+
+   ```bash
+   sudo nano /etc/nginx/sites-available/default
+   ```
+
+   Update the `server` block for both `80` and `443` ports with this configuration:
+
+   ```nginx
+   server {
+       listen 80;
+       server_name <your-domain-name>;
+
+       location / {
+           proxy_pass http://localhost:3000;
+           proxy_http_version 1.1;
+           proxy_set_header Upgrade $http_upgrade;
+           proxy_set_header Connection 'upgrade';
+           proxy_set_header Host $host;
+           proxy_cache_bypass $http_upgrade;
+       }
+   }
+   ```
+
+   **Note:** Since the webpage is a Node.js application, comment out the default static file settings:
+
+   ```nginx
+   # root /var/www/html;
+   # index index.html index.htm index.nginx-debian.html;
+   # try_files $uri $uri/ =404;
+   ```
+
+3. **Test your configuration:**
+
+   ```bash
+   sudo nginx -t
+   ```
+
+4. **Reload NGINX:**
+
+   ```bash
+   sudo systemctl reload nginx
+   ```
+
+Your domain should now serve your landing page over **HTTPS**!
