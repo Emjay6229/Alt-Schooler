@@ -13,7 +13,7 @@ CloudLaunch is a lightweight platform that showcases a basic company website and
 
 ## 🔑 AWS Account Access
 
-- ** See submitted google Docs for Access Creds
+- See submitted google Docs for Access Creds
 
 ## 📋 Architecture Overview
 
