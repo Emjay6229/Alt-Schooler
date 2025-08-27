@@ -21,9 +21,9 @@ S3 Static Website (Public Read-Only)
      ↓
 IAM User (Limited Permissions)
      ↓
-├── cloudlaunch-site-bucket (GetObject only)
-├── cloudlaunch-private-bucket (GetObject + PutObject)
-└── cloudlaunch-visible-only-bucket (ListBucket only)
+├── emjay-cloudlaunch-site-bucket (GetObject only)
+├── emjay-cloudlaunch-private-bucket (GetObject + PutObject)
+└── emjay-cloudlaunch-visible-only-bucket (ListBucket only)
 ```
 
 ### Task 2: VPC Network Design
