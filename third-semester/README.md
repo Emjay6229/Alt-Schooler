@@ -8,8 +8,8 @@ CloudLaunch is a lightweight platform that showcases a basic company website and
 
 ## 🌐 Live Demo
 
-- **S3 Static Website**: [http://cloudlaunch-site-bucket.s3-website-us-east-1.amazonaws.com](site-url)
-- **CloudFront URL**: [https://d2f3z6njyuqj9n.cloudfront.net](cloudFront-url)
+- **S3 Static Website**: [Static Website](http://emjay-cloudlaunch-site-bucket.s3-website.eu-north-1.amazonaws.com)
+- **CloudFront URL**: [View via CloudFront](https://d2f3z6njyuqj9n.cloudfront.net)
 
 ## 📋 Architecture Overview
 
