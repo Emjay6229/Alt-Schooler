@@ -11,6 +11,16 @@ CloudLaunch is a lightweight platform that showcases a basic company website and
 - **S3 Static Website**: [Static Website](http://emjay-cloudlaunch-site-bucket.s3-website.eu-north-1.amazonaws.com)
 - **CloudFront URL**: [View via CloudFront](https://d2f3z6njyuqj9n.cloudfront.net)
 
+## 🔑 AWS Account Access
+
+- **IAM Console URL**: https://558618577306.signin.aws.amazon.com/console
+- **Account ID**: `558618577306`
+
+**IAM User Credentials**:
+- **Username**: `Iam-cloudlaunch-user`
+- **Temporary Password**: `Iam-cloudlaunch-user`
+- **Note**: Please change password on first login
+
 ## 📋 Architecture Overview
 
 ### Task 1: Static Website Hosting + IAM Access Control
@@ -151,16 +161,6 @@ CloudLaunch VPC (10.0.0.0/16)
     ]
 }
 ```
-
-## 🔑 AWS Account Access
-
-- **IAM Console URL**: https://558618577306.signin.aws.amazon.com/console
-- **Account ID**: `558618577306`
-
-**IAM User Credentials**:
-- **Username**: `Iam-cloudlaunch-user`
-- **Temporary Password**: `Iam-cloudlaunch-user`
-- **Note**: Please change password on first login
 
 ## ✨ Bonus Features Implemented
 
