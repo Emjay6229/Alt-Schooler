@@ -13,13 +13,7 @@ CloudLaunch is a lightweight platform that showcases a basic company website and
 
 ## 🔑 AWS Account Access
 
-- **IAM Console URL**: https://558618577306.signin.aws.amazon.com/console
-- **Account ID**: `558618577306`
-
-**IAM User Credentials**:
-- **Username**: `Iam-cloudlaunch-user`
-- **Temporary Password**: `Iam-cloudlaunch-user`
-- **Note**: Please change password on first login
+- ** See submitted google Docs for Access Creds
 
 ## 📋 Architecture Overview
 
