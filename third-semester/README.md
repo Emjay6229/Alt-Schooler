@@ -154,8 +154,8 @@ CloudLaunch VPC (10.0.0.0/16)
 
 ## 🔑 AWS Account Access
 
-**IAM Console URL**: https://558618577306.signin.aws.amazon.com/console
-**Account ID**: `558618577306`
+- **IAM Console URL**: https://558618577306.signin.aws.amazon.com/console
+- **Account ID**: `558618577306`
 
 **IAM User Credentials**:
 - **Username**: `Iam-cloudlaunch-user`
