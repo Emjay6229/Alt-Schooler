@@ -8,8 +8,8 @@ CloudLaunch is a lightweight platform that showcases a basic company website and
 
 ## 🌐 Live Demo
 
-- **S3 Static Website**: [http://cloudlaunch-site-bucket.s3-website-us-east-1.amazonaws.com](emjay static site)
-- **CloudFront URL**: [https://d2f3z6njyuqj9n.cloudfront.net/](cloudFront URL)
+- **S3 Static Website**: [http://cloudlaunch-site-bucket.s3-website-us-east-1.amazonaws.com](site-url)
+- **CloudFront URL**: [https://d2f3z6njyuqj9n.cloudfront.net/](cloudFront-url)
 
 ## 📋 Architecture Overview
 
@@ -29,7 +29,7 @@ IAM User (Limited Permissions)
 ### Task 2: VPC Network Design
 ```
 CloudLaunch VPC (10.0.0.0/16)
-├── Internet Gateway (cloudlaunch-igw)
+├── Internet Gateway (emjay-cloudlaunch-igw)
 ├── Public Subnet (10.0.1.0/24) → Internet access
 ├── App Subnet (10.0.2.0/24) → Private
 └── DB Subnet (10.0.3.0/28) → Private
@@ -41,10 +41,10 @@ CloudLaunch VPC (10.0.0.0/16)
 
 #### S3 Buckets Created:
 1. **`emjay-cloudlaunch-site-bucket`**
-   - Hosts static website (HTML/CSS/JS)
+   - Hosts static website (HTML/CSS)
    - Publicly accessible (read-only)
    - Static website hosting enabled
-   - CloudFront distribution configured (bonus)
+   - CloudFront distribution configured
 
 2. **`emjay-cloudlaunch-private-bucket`**
    - Private document storage
@@ -57,15 +57,15 @@ CloudLaunch VPC (10.0.0.0/16)
    - No object access permissions
 
 #### IAM User Configuration:
-- **Username**: `iam-cloudlaunch-user`
+- **Username**: `Iam-cloudlaunch-user`
 - **Access Type**: AWS Management Console
 - **Password Policy**: Must change password on first login
-- **Custom Policy**: `IamCloudLaunchUserPolicy` (see below)
+- **Custom Policy**: `IamCloudLaunchUserPolicy` (see policy below)
 
 ### Task 2: VPC Network Architecture
 
 #### VPC Configuration:
-- **VPC Name**: `cloudlaunch-vpc`
+- **VPC Name**: `emjay-cloudlaunch-vpc`
 - **CIDR Block**: `10.0.0.0/16`
 - **DNS Support**: Enabled
 - **DNS Hostnames**: Enabled
@@ -154,18 +154,17 @@ CloudLaunch VPC (10.0.0.0/16)
 
 ## 🔑 AWS Account Access
 
-**Console URL**: https://123456789012.signin.aws.amazon.com/console *(Replace with your actual Account ID)*
-
-**Account ID**: `123456789012` *(Replace with your actual Account ID)*
+**IAM Console URL**: https://558618577306.signin.aws.amazon.com/console
+**Account ID**: `558618577306`
 
 **IAM User Credentials**:
 - **Username**: `Iam-cloudlaunch-user`
 - **Temporary Password**: `Iam-cloudlaunch-user`
-- **Note**: User must change password on first login
+- **Note**: Please change password on first login
 
 ## ✨ Bonus Features Implemented
 
-- [x] **CloudFront Distribution**
+- [x] **CloudFront (CDN) Distribution**
   - Global content delivery network
   - HTTPS support with free SSL certificate
   - Improved performance and security
@@ -209,10 +208,10 @@ CloudLaunch VPC (10.0.0.0/16)
 ### S3 Website Testing:
 1. Access S3 website endpoint - should load CloudLaunch homepage
 2. Verify public accessibility without authentication
-3. Test CloudFront URL (if implemented)
+3. Test CloudFront URL
 
 ### IAM User Testing:
-1. Login as `iam-cloudlaunch-user` with provided credentials
+1. Login as `Iam-cloudlaunch-user` with provided credentials
 2. Verify forced password change on first login
 3. Test bucket access permissions:
    - Can view all three buckets in S3 console
@@ -227,7 +226,7 @@ CloudLaunch VPC (10.0.0.0/16)
 3. Confirm security group rules
 4. Validate Internet Gateway attachment
 
-## 🏗️ Architecture Decisions
+<!-- ## 🏗️ Architecture Decisions
 
 ### Why These CIDR Blocks?
 - **10.0.0.0/16**: Provides 65,536 IP addresses for future growth
@@ -253,7 +252,7 @@ CloudLaunch VPC (10.0.0.0/16)
 - No NAT Gateway deployed (would incur charges)
 - No EC2 instances provisioned
 - CloudFront Free Tier covers expected traffic
-- Efficient use of IP address space
+- Efficient use of IP address space -->
 
 ## 🗂️ Project Structure
 
@@ -280,20 +279,7 @@ cloudlaunch-project/
 - **AWS Security Best Practices**: Least privilege and network isolation
 - **Infrastructure Documentation**: Clear architecture communication
 
-## 🔧 Future Enhancements
-
-- Custom domain configuration with Route 53
-- SSL certificate for custom domain
-- NAT Gateway for private subnet internet access
-- Application Load Balancer in public subnet
-- RDS database in private subnet
-- Auto Scaling Groups for application servers
-- CloudWatch monitoring and logging
-- AWS WAF for additional security
-
----
-
-**Project Completed**: [Current Date]  
+**Project Completed**: 2025-08-27  
 **AWS Region**: us-east-1  
 **Total Resources**: 15+ AWS resources deployed  
 **Cost**: $0.00 (Free Tier)
