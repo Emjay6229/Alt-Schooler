@@ -254,7 +254,7 @@ CloudLaunch VPC (10.0.0.0/16)
 - CloudFront Free Tier covers expected traffic
 - Efficient use of IP address space -->
 
-## 🗂️ Project Structure
+<!-- ## 🗂️ Project Structure
 
 ```
 cloudlaunch-project/
@@ -268,7 +268,7 @@ cloudlaunch-project/
 └── documentation/
     ├── architecture-diagram.png
     └── implementation-notes.md
-```
+``` -->
 
 ## 📚 What I Learned
 
@@ -277,11 +277,11 @@ cloudlaunch-project/
 - **VPC Network Design**: Subnets, routing, and security groups
 - **CloudFront CDN**: Global content distribution and HTTPS
 - **AWS Security Best Practices**: Least privilege and network isolation
-- **Infrastructure Documentation**: Clear architecture communication
+<!-- - **Infrastructure Documentation**: Clear architecture communication -->
 
-**Project Completed**: 2025-08-27  
+<!-- **Project Completed**: 2025-08-27  
 **AWS Region**: us-east-1  
 **Total Resources**: 15+ AWS resources deployed  
-**Cost**: $0.00 (Free Tier)
+**Cost**: $0.00 (Free Tier) -->
 
 > This project demonstrates fundamental AWS skills in cloud infrastructure, security, and networking suitable for cloud engineering roles.
